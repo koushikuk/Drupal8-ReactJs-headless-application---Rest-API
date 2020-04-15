@@ -1,0 +1,7 @@
+name: STUDENT API
+description: "Rest API to manage crud operation"
+type: module
+package: custom
+core: '8.x'
+dependencies:
+    - drupal:rest
