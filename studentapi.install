@@ -1,0 +1,65 @@
+<?php
+/** Implement hook_schema */
+
+function studentapi_schema() {
+    $schema['studentapi'] = [
+   'description' => 'Table to hold data for students',
+   'fields' => [
+       'id' => [
+               'description' => 'The primary identifier for the record.',
+               'type' => 'serial',
+               'unsigned' => TRUE,
+               'not null' => TRUE,
+         ],
+       'uid' => [
+           'description' => 'The {users}.uid that added this rsvp.',
+           'type' => 'int',
+           'not null' => FALSE,
+           'default' => 0,
+       ],
+       'std_first_name' => [
+           'description' => 'The student first name field',
+           'type' => 'varchar',
+           'length' => 64,
+           'not null' => FALSE,
+           'default' => 0,
+       ],
+       'std_last_name' => [
+           'description' => 'The student last name field',
+           'type' => 'varchar',
+           'length' => 64,
+           'not null' => FALSE,
+           'default' => 0,
+       ],
+       'std_mail' => [
+           'description' => 'Students\'s email address.',
+           'type' => 'varchar',
+           'length' => 64,
+           'not null' => FALSE,
+           'default' => '',
+       ],
+       'program' => [
+           'description' => 'Student\'s course/pgoram name',
+           'type' => varchar,
+           'length' => 64,
+           'not null' => FALSE,
+           'default' => ''
+       ],
+       'active' => [
+           'description' => 'Whether student is a active student or not',
+           'type' => varchar,
+           'length' => 64,
+           'not null' => FALSE,
+           'default' => ''
+       ],
+       'created' => [
+           'type' => 'int',
+           'not null' => TRUE,
+           'default' => 0,
+           'description' => 'Timestamp for when student data was created.',
+       ],
+     ],
+     'primary key' => ['id']
+   ];
+    return $schema;
+}
