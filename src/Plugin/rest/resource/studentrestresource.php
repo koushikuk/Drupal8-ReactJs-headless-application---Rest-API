@@ -94,6 +94,6 @@ die("this is a test");
 // You must to implement the logic of your REST Resource here.
 // Use current user after pass authentication to validate access.
 
-return new ResourceResponse($node);
+return new ResourceResponse("test data");
 }
 }

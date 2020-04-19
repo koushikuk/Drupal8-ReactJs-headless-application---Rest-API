@@ -16,7 +16,6 @@ use Psr\Log\LoggerInterface;
  * @RestResource(
  *   id = "site_bundle_post",
  *   label = @Translation("Custom rest resource"),
- *   serialization_class = "Drupal\node\Entity\Node",
  *   uri_paths = {
  *     "canonical" = "/api/custom",
  *     "https://www.drupal.org/link-relations/create" = "/api/custom"
@@ -77,18 +76,12 @@ class RestResourceComplete extends ResourceBase {
    * Responds to POST requests.
    *
    * Returns a list of bundles for specified entity.
-   *
-   * @param $node_type
    * @param $data
    * @return \Drupal\rest\ResourceResponse Throws exception expected.
    * Throws exception expected.
    */
-  public function post($node_type, $data) {
-    print '========';
-    print_r($node_type);
-    print '++++++++++';
+  public function post(array $data) {
     print_r($data);
-    print "................";
     die;
 
 
