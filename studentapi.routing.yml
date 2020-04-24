@@ -1,7 +1,7 @@
-studentapi.form:
+studentapi.addform:
   path: '/addstudent'
   defaults:
-    _title: 'Add Student Form'
-    _form: '\Drupal\studentapi\Form\StudentForm'
+    _title: 'Add Student'
+    _form: '\Drupal\studentapi\Form\StudentAddForm'
   requirements:
     _permission: 'access content'
